@@ -4,7 +4,6 @@ import gevent.socket as socket
 
 def handle(sock):
     buf = sock.recv(100)
-    # cpu intensive calculation
     while buf:
         sock.send(buf)
         buf = sock.recv(100)
